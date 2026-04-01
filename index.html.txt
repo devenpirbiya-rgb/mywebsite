@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyEarn Academy - Best Online Courses for Indian Students | Computer, Digital Marketing, Web Development</title>
+    <meta name="description" content="Learn Computer Basics, Digital Marketing, Spoken English, Web Development, Tally GST & Graphic Design. Affordable courses starting ₹999. Build your career with StudyEarn Academy.">
+    <meta name="keywords" content="online courses India, computer basics, digital marketing course, spoken English, web development, tally gst, graphic design, affordable courses">
+    <meta name="author" content="StudyEarn Academy">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="StudyEarn Academy - Best Online Courses for Indian Students">
+    <meta property="og:description" content="Master in-demand skills with affordable courses starting ₹999. Computer Basics, Digital Marketing, Web Development & more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edurise-academy.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,107,0.6);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #667eea;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .course-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 1rem 0;
+        }
+
+        .buy-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.02);
+        }
+
+        /* Ads Section */
+        .ads-section {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .ads-placeholder {
+            background: #ddd;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #ff6b6b;
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(102, 126, 234, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .courses-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">📚 StudyEarn Academy</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in-up">
+        <div class="container">
+            <h1>Master In-Demand Skills & Build Your Dream Career</h1>
+            <p>Learn Computer Basics, Digital Marketing, Web Development, Spoken English & more from expert Indian instructors. Affordable courses starting at just ₹999!</p>
+            <a href="#courses" class="cta-button">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="fade-in-up">
+        <div class="container">
+            <h2 class="section-title">Our Top Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>🖥️ Computer Basics</h3>
+                    <p>Learn MS Office, Internet, Email, Windows & basic computer operations from scratch. Perfect for beginners!</p>
+                    <div class="course-price">₹999</div>
+                    <button class="buy-btn" onclick="buyCourse('Computer Basics', 999)">Buy Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>📈 Digital Marketing</h3>
+                    <p>Complete Digital Marketing course covering SEO, Social Media, Google Ads, Email Marketing & more.</p>
+                    <div class="course-price">₹2,999</div>
+                    <button class="buy-btn" onclick="buyCourse('Digital Marketing', 2999)">Buy Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>🗣️ Spoken English</h3>
+                    <p>Improve your English speaking skills with practical conversation practice & grammar lessons.</p>
+                    <div class="course-price">₹1,499</div>
+                    <button class="buy-btn" onclick="buyCourse('Spoken English', 1499)">Buy Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>🌐 Web Development</h3>
+                    <p>Build professional websites using HTML, CSS, JavaScript, Bootstrap & React. Live projects included.</p>
+                    <div class="course-price">₹4,999</div>
+                    <button class="buy-btn" onclick="buyCourse('Web Development', 4999)">Buy Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>💰 Tally with GST</h3>
+                    <p>Complete Tally Prime course with GST filing, Accounting, Inventory & Payroll management.</p>
+                    <div class="course-price">₹2,499</div>
+                    <button class="buy-btn" onclick="buyCourse('Tally with GST', 2499)">Buy Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>🎨 Graphic Design</h3>
+                    <p>Master Photoshop, Illustrator & Canva. Create stunning logos, posters & social media graphics.</p>
+                    <div class="course-price">₹1,999</div>
+                    <button class="buy-btn" onclick="buyCourse('Graphic Design', 1999)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Section (Google AdSense Ready) -->
+    <section class="ads-section">
+        <div class="container">
+            <h3>🔥 Google AdSense Ready - Replace with your ad code</h3>
+            <!-- Google AdSense Responsive Ad Unit - Replace with your Publisher ID -->
+            <div class="ads-placeholder">
+                📢 AdSense 300x250 or 336x280<br>
+                <small>Replace this div with your AdSense code</small>
+            </div>
+            <div class="ads-placeholder" style="height: 90px;">
+                📱 Mobile Banner Ad (320x100)<br>
+                <small>Replace with responsive ad unit</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Products Section -->
+    <section class="fade-in-up" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Recommended Products</h2>
+            <div style="display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0;">
+                <div style="min-width: 200px; background: white; padding: 1rem; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e3f2fd'/><text y='50%' font-size='12' text-anchor='middle'>Laptop</text></svg>" alt="Laptop" style="width: 80px; height: 80px;">
+                    <p>₹25,000 <br><small>Amazon Affiliate</small></p>
+                </div>
+                <div style="min-width: 200px; background: white; padding: 1rem; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f3e5f5'/><text y='50%' font-size='12' text-anchor='middle'>Course Bundle</text></svg>" alt="Course Bundle" style="width: 80px; height: 80px;">
+                    <p>₹4,999 <br><small>Udemy Affiliate</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="fade-in-up">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing Web Development course! Got placed in a good company within 3 months. Highly recommended!"</p>
+                    <strong>- Priya Sharma, Delhi</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Digital Marketing course changed my career. Now earning ₹50,000/month as freelancer!"</p>
+                    <strong>- Rahul Kumar, Bangalore</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐
